@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EduSettingController">
+   <children>
+      <TabPane layoutX="4.0" prefHeight="628.0" prefWidth="692.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabAmount" text="Amount Setting">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cobUniversity" layoutX="6.0" layoutY="20.0" prefHeight="25.0" prefWidth="222.0" promptText="Choose University" />
+                        <ComboBox fx:id="cobAcademicYear" layoutX="259.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0" promptText="Choose Academic Year" />
+                        <TableView fx:id="tbAmount" layoutX="-4.0" layoutY="53.0" prefHeight="550.0" prefWidth="698.0">
+                          <columns>
+                              <TableColumn fx:id="universityIdForAmount" prefWidth="52.0" text="UniId" />
+                            <TableColumn fx:id="universityName" prefWidth="356.0" text="University Name" />
+                            <TableColumn fx:id="academicYear" prefWidth="163.0" text="Academic Year" />
+                              <TableColumn fx:id="amount" prefWidth="124.0" text="Amount" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="University Setting">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane fx:id="apScholarAmount" layoutX="453.0" layoutY="364.0" prefHeight="228.0" prefWidth="386.0" style="-fx-background-color: #FFF; -fx-border-color: #6039bc;" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <Label alignment="CENTER" layoutX="-1.0" prefHeight="40.0" prefWidth="386.0" style="-fx-background-color: #1859a8;" text="Change scholar amount." textFill="#f5e3e3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="40.0" prefHeight="31.0" prefWidth="116.0" text="UniversityName" textFill="#2c2f32" />
+            <Label layoutX="14.0" layoutY="86.0" prefHeight="17.0" prefWidth="89.0" text="Attendance Year" />
+            <Label layoutX="14.0" layoutY="122.0" text="Amount" />
+            <TextField fx:id="tfAmount" layoutX="123.0" layoutY="118.0" />
+            <Label fx:id="lblUniName" layoutX="123.0" layoutY="47.0" prefHeight="17.0" prefWidth="260.0" text="Uni Name" />
+            <Label fx:id="lblYearName" layoutX="123.0" layoutY="86.0" prefHeight="17.0" prefWidth="106.0" text="Year name" />
+            <Button fx:id="btnCancelAmount" layoutX="59.0" layoutY="184.0" mnemonicParsing="false" onAction="#processCancelAmount" prefHeight="31.0" prefWidth="76.0" text="Cancel" />
+            <Button fx:id="btnUpdatAmount" layoutX="191.0" layoutY="184.0" mnemonicParsing="false" onAction="#processUpdatedAmount" prefHeight="31.0" prefWidth="76.0" text="Update" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
